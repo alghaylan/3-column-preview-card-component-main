@@ -1,0 +1,147 @@
+:root{
+    --clr_white : hsla(0, 0%, 100%, 0.75);
+    --clr_light_gray :  hsl(0, 0%, 95%);
+
+    --ff_bold: 'Big Shoulders Display';
+    --ff_accent: 'Lexend Deca', sans-serif;;
+}
+
+*{
+    margin: 0;
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+body{
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+/* improve media defaults */
+img , picture,video, svg, canvas{
+    display: block;
+    max-width: 100%;
+}
+/* avoid text overflows */
+h1,p{
+    overflow-wrap: break-word;
+}
+
+body{
+    min-height: 100vh;
+    color:var(--clr_white) ;
+    background-color: var(--clr_light_gray);
+    display: grid;
+    place-content: center;
+
+}
+main{
+background-color: var(--clr_white);
+display: grid;
+border-radius: .5rem;
+width: 190px;
+overflow: hidden;
+}
+main div{
+padding: 20px 25px;
+font-family: var(--ff_accent);
+}
+.sedans{
+   background-color: hsl(31, 77%, 52%); 
+}
+.suvs{
+    background-color: hsl(184, 100%, 22%);
+}
+.luxury{
+    background-color: hsl(179, 100%, 13%);
+}
+p{
+    color: hsla(0, 0%, 100%, 0.884);
+    font-weight: 400;
+    font-family: var(--ff_accent);
+    font-size: 15px;
+} button{
+    background-color:  hsl(0, 0%, 95%);
+    border-radius: 20px;
+    padding:  7px 15px;
+    border: 0;
+    font-size: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+h1{
+    font-weight: 700;
+    font-family: var(--ff_bold);
+    color:  hsl(0, 0%, 95%);
+}
+main div img{
+   width: 30px;
+}
+main div h1{
+
+   font-size: 18px;
+   color: var(--clr_white);
+   margin: 10px 0px;
+
+}
+main div p{
+    color: var(--clr_white); 
+    font-size: 9px;
+    font-family: var(--ff_accent);
+    margin-bottom: 10px;
+}
+.sedans button{
+    color: hsl(31, 77%, 52%);
+}
+.sedans button:hover{
+    background-color: hsl(31, 77%, 52%);
+    color: var(--clr_white);
+    border:1px solid var(--clr_white);
+}
+.luxury button{
+    color: hsl(179, 100%, 13%);
+}
+.luxury button:hover{
+    background-color: hsl(179, 100%, 13%);
+    color: var(--clr_white);
+    border:1px solid var(--clr_white);
+}
+.suvs button{
+    color: hsl(184, 100%, 22%);
+}
+.suvs button:hover{
+    background-color: hsl(184, 100%, 22%);
+    color: var(--clr_white);
+    border:1px solid var(--clr_white);
+}
+
+@media (min-width:600px) {
+    main{
+        display: flex;
+        width: 600px;
+        height: 333px;
+    }
+    main div{
+        padding: 30px;
+     
+        
+    }
+    main div h1{
+        font-size: 25px;
+        margin: 20px auto; 
+
+    }
+    main div img{
+        width: 50px;
+    }
+    main div p{
+        line-height: 17px;
+        font-size: 10px;
+        font-family: var(--ff_accent);
+        margin-bottom: 50px;
+    }
+    main div button{
+        padding: 12px 20px;
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+}
